@@ -1,6 +1,6 @@
 # Market App
 
-In this app written with react library and uses redux package as a global state management.
+This app iswritten with React library and uses Redux package as a global state management.
 
 ## Available npm Commands
 
