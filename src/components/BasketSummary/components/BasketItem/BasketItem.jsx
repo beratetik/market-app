@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 
-import { increaseProductCount, subtractFromBasket } from '../../../../shared/store/actions/cart.actions'
+import { increaseProductCount, subtractFromBasket } from '../../../../shared/store/cart/cart.actions'
 import { Text } from '../../../../shared/components'
 
 import plusIcon from '../../../../assets/icons/plus.svg'

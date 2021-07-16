@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 
-import { filterProducts } from '../../../../shared/store/actions/products.actions'
+import { filterProducts } from '../../../../shared/store/product/product.actions'
 
 import { ProductTypeListWrapper, ProductTypeWrapper, Type } from './styles'
 

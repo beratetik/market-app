@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 
-import { goToPage } from '../../../../shared/store/actions/products.actions'
+import { goToPage } from '../../../../shared/store/product/product.actions'
 
 import { Image } from '../../../../shared/components'
 import { PagiantionWrapper, Button, PageNoButton } from './styles'

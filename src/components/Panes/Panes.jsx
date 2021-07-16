@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { migrateManufacturers } from '../../shared/store/actions/products.actions'
+import { migrateManufacturers } from '../../shared/store/product/product.actions'
 
 import { Pane } from './components'
 import { PanesWrapper, PanesStickyWrapper } from './styles'
@@ -21,10 +21,10 @@ const Panes = () => {
   return (
     <PanesWrapper>
       <PanesStickyWrapper>
-        {config.map(item => (
+        {config.map((item, index) => (
           <Pane
             list={products[item.field]}
-            key={item.field}
+            key={index}
             filters={products.filters[item.field]}
             {...item}
           />

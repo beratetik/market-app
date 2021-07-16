@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { sortProducts } from '../../../../../../shared/store/actions/products.actions'
+import { sortProducts } from '../../../../../../shared/store/product/product.actions'
 import { Text } from '../../../../../../shared/components'
 import { palette } from '../../../../../../shared/styles'
 

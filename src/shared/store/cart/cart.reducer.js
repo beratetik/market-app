@@ -2,9 +2,9 @@ import {
   ADD_TO_BASKET,
   INCREASE_PRODUCT_COUNT,
   SUBTRACT_FROM_BASKET
-} from '../constants/cart.types'
+} from './cart.types'
 
-import * as actions from '../actions/cart.actions'
+import * as handler from './cart.handlers'
 
 const initialState = {
   cart: [],
@@ -12,9 +12,9 @@ const initialState = {
 }
 
 export const ACTION_HANDLERS = {
-  [ADD_TO_BASKET]: actions.addToBasketHandler,
-  [INCREASE_PRODUCT_COUNT]: actions.increaseProductCountHandler,
-  [SUBTRACT_FROM_BASKET]: actions.subtractFromBasketHandler
+  [ADD_TO_BASKET]: handler.addToBasketHandler,
+  [INCREASE_PRODUCT_COUNT]: handler.increaseProductCountHandler,
+  [SUBTRACT_FROM_BASKET]: handler.subtractFromBasketHandler
 }
 
 const cartReducer = (state = initialState, action) => {

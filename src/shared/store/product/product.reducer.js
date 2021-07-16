@@ -3,8 +3,8 @@ import {
   SORT_PRODUCTS,
   FILTER_PRODUCTS,
   GO_TO_PAGE, 
-  MIGRATE_MANUFACTURERS} from '../constants/product.types'
-import * as actions from '../actions/products.actions'
+  MIGRATE_MANUFACTURERS} from './product.types'
+import * as handler from './product.handlers'
 
 const initialState = {
   productList: [],
@@ -27,11 +27,11 @@ const initialState = {
 }
 
 export const ACTION_HANDLERS = {
-  [GET_PRODUCTS]: actions.getProductsHandler,
-  [SORT_PRODUCTS]: actions.getSortProductsHandler,
-  [FILTER_PRODUCTS]: actions.filterProductsHandler,
-  [MIGRATE_MANUFACTURERS]: actions.migrateManufacturersHandler,
-  [GO_TO_PAGE]: actions.goToPageHandler
+  [GET_PRODUCTS]: handler.getProductsHandler,
+  [SORT_PRODUCTS]: handler.getSortProductsHandler,
+  [FILTER_PRODUCTS]: handler.filterProductsHandler,
+  [MIGRATE_MANUFACTURERS]: handler.migrateManufacturersHandler,
+  [GO_TO_PAGE]: handler.goToPageHandler
 }
 
 const productReducer = (state = initialState, action) => {

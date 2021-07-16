@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { addToBasket } from '../../shared/store/actions/cart.actions'
+import { addToBasket } from '../../shared/store/cart/cart.actions'
 import { Loading } from '../../shared/components'
 
 import { ProductListWrapper, ProductCardListWrapper, PaginateWrapper, Title } from './styles'

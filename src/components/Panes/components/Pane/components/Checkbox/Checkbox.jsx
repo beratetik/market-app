@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { Loading, Text } from '../../../../../../shared/components'
 import { palette } from '../../../../../../shared/styles'
 import { searchFilter } from '../../../../../../shared/utils'
-import { filterProducts } from '../../../../../../shared/store/actions/products.actions'
+import { filterProducts } from '../../../../../../shared/store/product/product.actions'
 
 import { SelectItem, Input } from '../shared/styles'
 import {

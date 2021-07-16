@@ -1,13 +1,13 @@
-import { LOADING, GET_MANUFACTURERS } from '../constants/manufacturer.types'
-import * as actions from '../actions/manufacturer.actions'
+import { LOADING, GET_MANUFACTURERS } from './manufacturer.types'
+import * as handlers from './manufacturer.handlers'
 
 const initialState = {
   list: []
 }
 
 export const ACTION_HANDLERS = {
-  [GET_MANUFACTURERS]: actions.getManufacturersHandler,
-  [LOADING]: actions.setLoadingHandler
+  [GET_MANUFACTURERS]: handlers.getManufacturersHandler,
+  [LOADING]: handlers.setLoadingHandler
 }
 
 const manufacturersReducer = (state = initialState, action) => {

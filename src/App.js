@@ -4,8 +4,8 @@ import { useDispatch } from 'react-redux';
 import { Header, Panes, ProductList, BasketSummary } from './components'
 import { Container } from './styles'
 
-import { getProducts } from './shared/store/actions/products.actions'
-import { getManufacturers } from './shared/store/actions/manufacturer.actions'
+import { getProducts } from './shared/store/product/product.actions'
+import { getManufacturers } from './shared/store/manufacturer/manufacturer.actions'
 
 function App() {
   const dispatch = useDispatch()
