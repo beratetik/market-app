@@ -1,7 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import { palette } from '../../../../shared/styles'
-
 
 export const BoxWrapper = styled.div`
   background: ${palette.white};
@@ -11,8 +10,8 @@ export const BoxWrapper = styled.div`
   align-items: flex-start;
   border-radius: 2px;
   box-shadow: 0px 6px 24px 0px rgba(93, 62, 188, 0.04);
-  margin: 12px 0  24px;  
-  height: 244px;
+  margin: 12px 0 24px;  
+  ${({ type }) => type === 'checkbox' ? `height: 244px;` : '' }
 `
 
 export const Title = styled.span`

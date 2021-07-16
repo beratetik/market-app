@@ -1,33 +1,50 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 
-import { Loading } from '../../../../../../shared/components'
+import { Loading, Text } from '../../../../../../shared/components'
+import { palette } from '../../../../../../shared/styles'
 import { searchFilter } from '../../../../../../shared/utils'
 import { filterProducts } from '../../../../../../shared/store/actions/products.actions'
 
+import { SelectItem, Input } from '../shared/styles'
 import {
   SelecListWrapper,
-  SearchWrapper,
-  SelectItem,
-  Label,
-  Count,
-  Input
+  SearchWrapper
 } from './styles'
 
-
 const ItemLabel = ({ slug, name, count }) => {
-  if (!count) return <Label htmlFor={slug}>{name}</Label>
+  if (!count) {
+    return (
+      <Text
+        type='label'
+        htmlFor={slug}
+        value={name}
+        color={palette.paneItemColor}
+      />
+    )
+  }
 
   return (
     <>
-      <Label htmlFor={slug}>{name}</Label>
-      <Count>({count})</Count>
+      <Text
+        type='label'
+        htmlFor={slug}
+        value={name}
+        color={palette.paneItemColor}
+      />
+      <Text
+        type='label'
+        left={4}
+        htmlFor={slug}
+        value={`(${count})`}
+        color={palette.leftPaneItemColor} />
     </>
   )
 }
 
 const Item = ({ slug, name, type, checked, count, field }) => {
   const dispatch = useDispatch()
+
   return (
     <SelectItem>
       <Input

@@ -16,7 +16,7 @@ export const BasketSummaryWrapper = styled.div`
 `
 
 export const BasketWrapper = styled.div`
-  padding: 8px 18px;
+  padding: 24px;
   border: 8px solid ${palette.blue};
   background: ${palette.white};
   display: flex;

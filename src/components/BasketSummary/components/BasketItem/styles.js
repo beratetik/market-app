@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { palette } from '../../../../shared/styles'
+import { palette, typo } from '../../../../shared/styles'
 
 export const BasketItemWrapper = styled.div`
   display: flex;
@@ -16,24 +16,17 @@ export const BasketItemWrapper = styled.div`
 `
 
 export const ProductName = styled.span`
-  font-size: 14px;
-  line-height: 18px;
+  ${typo.text}
   font-weight: 400;
-  font-family: 'Open Sans';
-  letter-spacing: 0.16px;
   color: ${palette.itemTextColor};
 `
 
 export const Price = styled.p`
-  font-size: 14px;
-  line-height: 18px;
-  font-family: 'Open Sans';
+  ${typo.text}
   font-weight: 600;
-  letter-spacing: 0.16px;
   color: ${palette.blue};
   margin: 4px 0 0 0;
 `
-
 export const CounterWrapper = styled.div`
   display: flex;
   align-items: center;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { Loading } from '../../../../shared/components'
-import { Checkbox } from './components'
+import { Checkbox, Radio } from './components'
 
 import {
   BoxWrapper,
@@ -9,7 +9,7 @@ import {
 } from './styles'
 
 const Panes = {
-  'radio': Checkbox,
+  'radio': Radio,
   'checkbox': Checkbox
 }
 
@@ -25,8 +25,8 @@ const Pane = ({ type = 'checkbox', list, filters, field, title }) => {
   return (
     <>
       <Title>{title}</Title>
-      <BoxWrapper>
-        <InnerComponent {...{ field, filters, filteredList, setFilteredList, type }} />
+      <BoxWrapper {...{ type }}>
+        <InnerComponent {...{ field, filters, filteredList, setFilteredList, type, list }} />
       </BoxWrapper>
     </>
   )

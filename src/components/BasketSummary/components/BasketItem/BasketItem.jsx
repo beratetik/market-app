@@ -2,13 +2,13 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 
 import { increaseProductCount, subtractFromBasket } from '../../../../shared/store/actions/cart.actions'
+import { Text } from '../../../../shared/components'
 
 import plusIcon from '../../../../assets/icons/plus.svg'
 import minusIcon from '../../../../assets/icons/minus.svg'
 
 import {
   BasketItemWrapper,
-  ProductName,
   Price,
   CounterWrapper,
   Button,
@@ -16,7 +16,6 @@ import {
   Image,
   ProductDetails
 } from './styles'
-
 
 const CounterButtons = ({ qty, slug }) => {
   const dispatch = useDispatch()
@@ -37,7 +36,7 @@ const CounterButtons = ({ qty, slug }) => {
 const BasketItem = ({ name, price, ...rest }) => (
   <BasketItemWrapper>
     <ProductDetails>
-      <ProductName>{name}</ProductName>
+      <Text value={name} />
       <Price>₺{price}</Price>
     </ProductDetails>
     <CounterButtons {...rest} />

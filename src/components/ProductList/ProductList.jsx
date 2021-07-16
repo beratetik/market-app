@@ -1,6 +1,5 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux';
-import ReactPaginate from 'react-paginate';
+import { useSelector, useDispatch } from 'react-redux'
 
 import { addToBasket } from '../../shared/store/actions/cart.actions'
 import { Loading } from '../../shared/components'
@@ -34,18 +33,6 @@ const ProductList = () => {
       </ProductCardListWrapper>
       <Pagination {...products} />
       <PaginateWrapper>
-        <ReactPaginate
-          previousLabel={"← Previous"}
-          nextLabel={"Next →"}
-          breakLabel="..."
-          breakClassName="dots"
-          activeClassName="active"
-          containerClassName="pagination"
-          pageCount={190}
-          pageRangeDisplayed={3}
-          marginPagesDisplayed={3}
-          onPageChange={(e) => console.log("onPageChange", e)}
-        />
       </PaginateWrapper>
     </ProductListWrapper>
   )

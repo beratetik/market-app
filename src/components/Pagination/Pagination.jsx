@@ -5,7 +5,7 @@ import { PagiantionWrapper } from './styles'
 
 const Pagination = () => {
   const products = useSelector(state => state.products)
-  
+
   return (
     <PagiantionWrapper>
       <div>Prev</div>
