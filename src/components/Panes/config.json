@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Brands",
+    "type": "checkbox",
+    "search": true,
+    "placeholder": "brand",
+    "field": "manufacturer"
+  },
+  {
+    "title": "Tags",
+    "type": "checkbox",
+    "search": true,
+    "placeholder": "tag",
+    "field": "tags"
+  }
+]

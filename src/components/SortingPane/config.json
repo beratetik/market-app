@@ -1,0 +1,22 @@
+{
+  "title": "Sorting",
+  "type": "radio",
+  "list": [
+    {
+      "name": "lowToHigh",
+      "label": "Price low to high"
+    },
+    {
+      "name": "highToLow",
+      "label": "Price high to low"
+    },
+    {
+      "name": "newToOld",
+      "label": "New to old"
+    },
+    {
+      "name": "oldToNew",
+      "label": "Old to new"
+    }
+  ]
+}
