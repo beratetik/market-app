@@ -4,9 +4,9 @@ This app iswritten with React library and uses Redux package as a global state m
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/314efc17-9ad2-41c5-9f06-ef9886ffaacf/deploy-status)](https://app.netlify.com/sites/getir-market-app/deploys)
 
-Netlify Link: https://getir-market-app.netlify.app/
-Vercel Link: https://market-app-qhyv2jbqn-berat-tetik.vercel.app/
-Heroku Link: https://getir-market-app.herokuapp.com/
+Netlify Link: https://getir-market-app.netlify.app/ \
+Vercel Link: https://market-app-qhyv2jbqn-berat-tetik.vercel.app/ \
+Heroku Link: https://getir-market-app.herokuapp.com/ 
 
 ## Available npm Commands
 
