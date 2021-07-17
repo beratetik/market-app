@@ -29,4 +29,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Prepares the mock endpoints be ready. It runs on the PORT=3001 as default.
 
 
-Notes: I don't have time for the mobile styling. I only complete tablet and desktop designs.
+<hr />
+*Notes: I don't have time for the mobile styling. I only complete tablet and desktop designs.
