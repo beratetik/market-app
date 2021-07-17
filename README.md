@@ -4,6 +4,10 @@ This app iswritten with React library and uses Redux package as a global state m
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/314efc17-9ad2-41c5-9f06-ef9886ffaacf/deploy-status)](https://app.netlify.com/sites/getir-market-app/deploys)
 
+Netlify Link: https://getir-market-app.netlify.app/
+Vercel Link: https://market-app-qhyv2jbqn-berat-tetik.vercel.app/
+Heroku Link: https://getir-market-app.herokuapp.com/
+
 ## Available npm Commands
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -22,7 +26,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm run mock`
 
-Prepares the mock endpoints be ready.
+Prepares the mock endpoints be ready. It runs on the PORT=3001 as default.
 
 
-Notes: I don't have time for the mobile styling. I only complete tablet and desktop designs. And pagination is not working right now.
+Notes: I don't have time for the mobile styling. I only complete tablet and desktop designs.
