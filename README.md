@@ -30,4 +30,4 @@ Prepares the mock endpoints be ready. It runs on the PORT=3001 as default.
 
 
 <hr />
-*Notes: I don't have time for the mobile styling. I only complete tablet and desktop designs.
+*Notes: I don't have time for the mobile styling. I only completed tablet and desktop designs.
