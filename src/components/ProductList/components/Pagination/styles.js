@@ -8,24 +8,6 @@ export const PagiantionWrapper = styled.div`
   margin-top: 32px;
 `
 
-export const Button = styled.button`
-  display: flex;
-  align-items: center;
-  background: transparent;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
-  border: none;
-  
-  ${({ active }) => {
-    if (active) return `
-      color: ${palette.blue};
-      cursor: pointer;
-    `
-    return `color: ${palette.leftPaneTitleColor}`
-  }};
-`
-
 export const PageNoButton = styled.button`
   font-size: 14px;
   font-weight: 600;
@@ -45,4 +27,9 @@ export const PageNoButton = styled.button`
       color: ${palette.leftPaneTitleColor};
     `
   }}
+`
+
+export const Dots = styled.span`
+  padding: 12px;
+  color: ${palette.leftPaneTitleColor};
 `

@@ -7,7 +7,6 @@ import {
 
 export const getProductsHandler = (state, { payload }) => {
     const productList = payload.sort(SORT_TYPES[state.sort])
-  
     const paginatedProducts = {
       productList,
       filteredList: productList,
@@ -84,7 +83,8 @@ export const getProductsHandler = (state, { payload }) => {
       ...newState,
       filteredList: newFilteredList,
       currentList: newFilteredList.slice(0, state.perPage),
-      currentPage: 1
+      currentPage: 1,
+      totalPage: Math.ceil(newFilteredList.length / state.perPage)
     }
   }
   
@@ -113,14 +113,11 @@ export const getProductsHandler = (state, { payload }) => {
   }
   
   export const goToPageHandler = (state, { payload }) => {
-    console.log("goto page handler", state, payload)
     const paginatedProducts = {
-      currentList: state.filteredList.slice(state.perPage * payload, (state.perPage * payload )+ state.perPage),
+      currentList: state.filteredList.slice(state.perPage * (payload -1), (state.perPage * payload )),
       currentPage: payload
     }
-  
-    console.log("goto", paginatedProducts)
-  
+    
     return {
       ...state,
       ...paginatedProducts,

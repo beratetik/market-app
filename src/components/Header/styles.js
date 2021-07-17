@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { palette } from '../../shared/styles/index'
+import { palette } from '../../shared/styles'
 
 export const HeaderWrapper = styled.header`
   height: 77px;

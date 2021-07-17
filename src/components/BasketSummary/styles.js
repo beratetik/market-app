@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
-import { palette } from '../../shared/styles/index'
+import { palette } from '../../shared/styles'
 
-//same as PaneWrapper
 export const BasketSummaryWrapper = styled.div`
   display: flex;
   flex-direction: column;

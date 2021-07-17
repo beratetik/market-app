@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { palette } from '../../shared/styles/index'
+import { palette, typo } from '../../shared/styles'
 
 export const ProductListWrapper = styled.div``
 
@@ -9,10 +9,10 @@ export const ProductCardListWrapper = styled.div`
   background-color: ${palette.white};
   display: grid;
   grid-template-columns: repeat(4,minmax(124px, 0));
+  grid-template-rows: repeat(4, min-content);
   grid-gap: 20px 24px;
   padding: 20px;
   margin: 0 16px;
-  height: 100%;
 
   ${({ currentList }) => !currentList?.length ? `
     display: flex;
@@ -44,18 +44,16 @@ export const BoxWrapper = styled.div`
 export const Title = styled.h2`
   margin: 0;
   padding: 0 16px;
-  font-size: 20px;
-  line-height: 26px;
   font-weight: 400;
-  letter-spacing: 0.25px;
   color: ${palette.black};
+  ${typo.title}
 `
 
 export const PaginateWrapper = styled.div`
   .pagination {
     list-style-type: none;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     background: transparent;
     font-weight: 600;
     font-size: 14px;
