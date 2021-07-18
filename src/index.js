@@ -5,7 +5,6 @@ import { Provider } from 'react-redux'
 import App from './App';
 import GlobalStyle from './shared/styles/globalStyles';
 import FontStyle from './assets/fonts/fonts';
-
 import store from './shared/store'
 
 ReactDOM.render(

@@ -3,9 +3,11 @@ import axios from 'axios'
 import * as productTypes from './product.types'
 import { SORT_TYPES } from '../../utils/helpers'
 
+const { REACT_APP_API_URL } = process.env
+
 // Action Creators
 export const getProducts = () => async (dispatch) => {
-  const response = await axios.get('http://127.0.0.1:3001/products')
+  const response = await axios.get(`${REACT_APP_API_URL}/products`)
   dispatch({
     type: productTypes.GET_PRODUCTS,
     payload: response.data
