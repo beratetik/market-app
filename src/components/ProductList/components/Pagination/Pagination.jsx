@@ -14,6 +14,10 @@ const Pagination = ({ totalPage, currentPage }) => {
 
 
   useEffect(() => {
+    if (totalPage <= defaultRange) {
+      setPages([...Array(totalPage).keys()].map(i => i + 1))
+      return
+    }
     if (currentPage < defaultRange) {
       const rightPart = new Array(defaultRange / 2).fill('').map((_, i) => totalPage - i).reverse()
 
@@ -51,14 +55,7 @@ const Pagination = ({ totalPage, currentPage }) => {
       ])
       return
     }
-    if (totalPage < defaultRange) {
-      const rightPart = [...Array(totalPage).keys()].map(i => i + 1)
-      setPages([
-        '...',
-        ...rightPart
-      ])
-      return
-    }
+
 
   }, [currentPage, totalPage])
 
@@ -68,13 +65,15 @@ const Pagination = ({ totalPage, currentPage }) => {
     <PagiantionWrapper>
       <ControlButton
         type="Prev"
+        disabled={currentPage === 1}
         {...{ currentPage }}
         onClick={() => dispatch(goToPage(currentPage - 1))}
       />
-      {pages.map(item => {
-        if (!Number.isInteger(item)) return <Dots>...</Dots>
+      {pages.map((item, index) => {
+        if (!Number.isInteger(item)) return <Dots key={index}>...</Dots>
         return (
           <PageNoButton
+            key={index}
             onClick={() => dispatch(goToPage(item))}
             active={item === currentPage}>
             {item}
@@ -84,8 +83,9 @@ const Pagination = ({ totalPage, currentPage }) => {
       )}
       <ControlButton
         type="Next"
+        disabled={currentPage === totalPage}
         {...{ currentPage, totalPage }}
-        onClick={() => dispatch(goToPage(currentPage - 1))}
+        onClick={() => dispatch(goToPage(currentPage + 1))}
       />
     </PagiantionWrapper>
   )

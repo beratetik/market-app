@@ -22,9 +22,8 @@ const Icon = ({ active, type, reverse }) => (
   />
 )
 
-const ButtonContent = ({ type, currentPage, totalPage }) => {
-  const active = type === 'Prev' ? currentPage > 1 : currentPage < totalPage
-  const reverse= type === 'Prev' ? true : false
+const ButtonContent = ({ active, type, currentPage, totalPage }) => {
+  const reverse = type === 'Prev' ? true : false
 
   if (type === "Prev") {
     return (
@@ -44,13 +43,14 @@ const ButtonContent = ({ type, currentPage, totalPage }) => {
   )
 }
 
-const ControlButton = ({ currentPage, onClick, type, totalPage }) => (
-  <Button
-    disabled={currentPage === 1}
-    {...{ onClick }}
-  >
-    <ButtonContent  {...{ type, currentPage, totalPage }} />
-  </Button>
-)
+const ControlButton = ({ currentPage, onClick, type, totalPage, disabled }) => {
+  const active = type === 'Prev' ? currentPage > 1 : currentPage < totalPage
+
+  return (
+    <Button {...{ active, disabled, onClick }}>
+      <ButtonContent  {...{ active, type, currentPage, totalPage }} />
+    </Button>
+  )
+}
 
 export default ControlButton
