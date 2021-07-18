@@ -29,5 +29,32 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Prepares the mock endpoints be ready. It runs on the PORT=3001 as default.
 
 
+## Folder Structure
+
+    app
+    └── mock (It runs json-server with given companies and products json files) 
+    └── src 
+        └── App
+            ├── assets
+            │     ├── fonts (It stores fonts)
+            │     └── icons (It stores static icons)
+            │        
+            ├── components  (It stores UI components here, and components have their sub-components if necessary)
+            └── shared
+                   ├── components (It stores common using basic(atomic) components here)
+                   ├── store (Redux Store) - [Each store has types, actions, handlers and reducer]
+                   |     ├── cart 
+                   |     ├── manufacturer
+                   |     └── product
+                   |
+                   ├── styles (This folder has general styles of the app and common colors and typos as json files)
+                   └── utils (This folder has helper methods in order to avoid code complexity other parts of the app)
+
+
+### Deploys
+
+This repository connected to `Vercel` & `Netlify` & `Heroku` CI's, it automatically deploys after any updates on the `main` branch. 
+
+
 <hr />
 *Notes: I don't have time for the mobile styling. I only completed tablet and desktop designs.
