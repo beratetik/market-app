@@ -12,23 +12,25 @@ const ButtonTypes = {
   'Next': 'Go Next Page'
 }
 
-const Icon = ({ active, type, currentPage }) => (
+const Icon = ({ active, type, reverse }) => (
   <Image
-    reverse={type === 'Prev' ? true : false}
     src={active ? blueArrow : grayArrow}
     width={24}
     height={24}
     alt={ButtonTypes[type]}
+    {...{ reverse }}
   />
 )
 
-const ButtonContent = ({ type, currentPage, totalPage, ...rest }) => {
+const ButtonContent = ({ type, currentPage, totalPage }) => {
   const active = type === 'Prev' ? currentPage > 1 : currentPage < totalPage
+  const reverse= type === 'Prev' ? true : false
+
   if (type === "Prev") {
     return (
       <>
-        <Icon {...{ type, currentPage, active }} />
-        <ButtonText {...{ active, ...rest }}>{type}</ButtonText>
+        <Icon {...{ type, currentPage, active, reverse }} />
+        <ButtonText {...{ active, reverse }}>{type}</ButtonText>
       </>
     )
 
@@ -36,8 +38,8 @@ const ButtonContent = ({ type, currentPage, totalPage, ...rest }) => {
 
   return (
     <>
-      <ButtonText {...{ active, ...rest }}>{type}</ButtonText>
-      <Icon {...{ type, currentPage, active }} />
+      <ButtonText {...{ active, reverse }}>{type}</ButtonText>
+      <Icon {...{ type, currentPage, active, reverse }} />
     </>
   )
 }
